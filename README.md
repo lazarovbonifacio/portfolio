@@ -1,11 +1,12 @@
-# Laboratórios e Aprendizado
+# Labs and Learning
 
-Os labs têm objetivos específicos, enquanto os repos de estudo servem como um referência.
+The labs have specific objectives, while the study repositories serve as a reference.
 
 ## Labs
 
-- [Simple Machine: é apenas uma VM](https://github.com/lazarovbonifacio/simple_machine)
-- [K8LabS: meu lab de kubernetes](https://github.com/lazarovbonifacio/k8labs)
+- [Simple Machine: just a VM](https://github.com/lazarovbonifacio/simple_machine)
+- [K8LabS: my Kubernetes lab](https://github.com/lazarovbonifacio/k8labs)
+- [Demo API](https://github.com/lazarovbonifacio/demo-api)
 
 \
 📍👦🏻😢👩🏼🙈
