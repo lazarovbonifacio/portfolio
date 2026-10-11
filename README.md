@@ -1,51 +1,53 @@
-# Lázaro V Bonifácio
-### Arquiteto de Sistemas & Consultor de Engenharia de Software
+# Lázaro V. Bonifácio
+### Systems Architect & Software Engineering Consultant
 
-Desenho arquiteturas de software resilientes, eficientes e orientadas a resolver problemas reais de negócio. Atuo como parceiro técnico de CTOs e lideranças de engenharia para transformar gargalos operacionais em sistemas escaláveis, seguros por design e com custos sob controle — dentro ou fora da nuvem, com ou sem IA.
+I design resilient, efficient software architectures tailored to solve real business problems. I partner with CTOs and engineering leadership to transform operational bottlenecks into scalable, secure-by-design systems with controlled costs — on or off cloud, with or without AI.
 
-🌐 **Website Oficial:** [lazarovbonifacio.com](https://lazarovbonifacio.com)  
-📫 **Contato:** [contact@lazarovbonifacio.com](mailto:contact@lazarovbonifacio.com) | [LinkedIn](https://www.linkedin.com/in/lazarovbonifacio/) | [WhatsApp](https://wa.me/5584988135261)
-
----
-
-## Pilares de Entrega de Valor
-
-1. **Arquitetura de Sistemas & Modernização:** Design de backends robustos, modularização estratégica, microsserviços e integração resiliente de APIs para sustentar o crescimento acelerado com manutenibilidade de longo prazo.
-2. **Eficiência de Infraestrutura & Custos (FinOps):** Dimensionamento consciente, eliminação de desperdício em cloud e arquiteturas híbridas ou bare-metal sob medida para otimizar margens financeiras sem degradar a performance.
-3. **Segurança e Continuidade por Design:** Blindagem de esteiras e borda, governança de acessos (IAM), conformidade e auditoria contínua sem engessar os deploys ou desacelerar o time.
-4. **Automação de Processos & Soluções com IA:** Integração de rotinas manuais com scripts robustos e modelos de linguagem/visão computacional aplicados diretamente aos desafios operacionais da organização.
+🌐 **Official Website:** [lazarovbonifacio.com](https://lazarovbonifacio.com)  
+📄 **Curriculum Vitae:** [View my CV](https://lazarovbonifacio.com/resume-cv/)  
+📫 **Contact:** [contact@lazarovbonifacio.com](mailto:contact@lazarovbonifacio.com) | [LinkedIn](https://www.linkedin.com/in/lazarovbonifacio/) | [WhatsApp](https://wa.me/5584988135261)
 
 ---
 
-## Casos de Estudo & Arquiteturas
+## Strategic Value Delivery Pillars
 
-### 1. [Simple Machine: Ambientes Portáveis via IaC](https://github.com/lazarovbonifacio/simple_machine)
-- **Desafio de Negócio / Gargalo:** Discrepância entre ambientes de desenvolvimento e produção gerando falhas em releases, alto tempo de onboarding de novos engenheiros e dependência desnecessária de provedor de nuvem para validações locais.
-- **Decisão Arquitetural & Trade-offs:** Provisionamento declarativo via IaC (Vagrant/Terraform/Ansible) com isolamento total de dependências. Optou-se por imutabilidade de imagem em vez de scripts ad-hoc, priorizando repetibilidade determinística sobre customizações pontuais.
-- **Impacto Mensurável:** Redução de **80% no tempo de setup** de novos ambientes e eliminação completa de falhas provocadas por drift de configuração.
-
-### 2. [Arquitetura de Plataforma Resiliente](https://gitlab.com/lazarovbonifacio/devops-contexts)
-- **Desafio de Negócio / Gargalo:** Gargalos em deploys de microsserviços, falta de governança em pipelines e risco de indisponibilidade durante picos de demanda.
-- **Decisão Arquitetural & Trade-offs:** Desenho de arquitetura desacoplada com orquestração Kubernetes, esteiras de validação estática e deploys canários automatizados.
-- **Impacto Mensurável:** Releases com **zero-downtime**, redução de 65% no lead time de novas entregas e rastreabilidade total de conformidade.
-
-### 3. [Observabilidade & Telemetria Customizada](https://gitlab.com/lazarovbonifacio/monitoring-scripts)
-- **Desafio de Negócio / Gargalo:** Fadiga de alertas provocada por métricas genéricas, atrasando a identificação de incidentes reais de impacto financeiro.
-- **Decisão Arquitetural & Trade-offs:** Coletores sob medida em Python integrados a Prometheus/Zabbix, aplicando limiares dinâmicos e correlação inteligente de eventos de infraestrutura e aplicação.
-- **Impacto Mensurável:** Redução de **70% em alertas espúrios** e detecção preventiva de esgotamento de recursos antes de impactar os clientes finais.
-
-### 4. [Automação de Infraestrutura & Hardening](https://gitlab.com/lazarovbonifacio/meus-ansible-playbooks)
-- **Desafio de Negócio / Gargalo:** Gestão fragmentada de servidores gerando riscos de segurança, desvios operacionais e alto custo de manutenção manual.
-- **Decisão Arquitetural & Trade-offs:** Playbooks modulares e idempotentes em Ansible, aplicando políticas rigorosas de hardening de borda e governança sem prejudicar a flexibilidade dos serviços.
-- **Impacto Mensurável:** **100% dos servidores em conformidade contínua** e redução de 90% no esforço operacional de manutenção e auditoria de frotas.
+1. **Systems Architecture & Modernization:** Robust backend design, domain modularization, microservices, and resilient API contracts built to sustain rapid business growth with long-term maintainability.
+2. **Infrastructure Efficiency & FinOps:** Conscious resource sizing, cloud waste elimination, and tailored hybrid or bare-metal architectures to optimize financial margins without compromising performance.
+3. **Security & Continuity by Design:** Hardened delivery pipelines and edge security, access governance (IAM), and continuous compliance auditing without slowing down deployment velocity.
+4. **Process Automation & Applied AI:** Eliminating repetitive manual operational bottlenecks with robust automation tooling and practical LLM/computer vision integrations applied directly to production workflows.
 
 ---
 
-## Ferramental de Execução
+## Case Studies & Architecture Solutions
 
-As tecnologias dominadas são instrumentos subordinados às decisões estratégicas de arquitetura:
+### 1. [Simple Machine: Portable Environments via IaC](https://github.com/lazarovbonifacio/simple_machine)
+- **Business Challenge / Bottleneck:** Environment discrepancies between development and production triggering release failures, slow developer onboarding, and unnecessary cloud compute costs for local testing.
+- **Architectural Decision & Trade-offs:** Declarative provisioning pipelines via IaC (Vagrant/Terraform/Ansible) isolating dependencies. Prioritized immutable base environments over ad-hoc scripts, favoring deterministic repeatability over fragile configurations.
+- **Measurable Impact:** **80% reduction in local setup time** and complete elimination of configuration drift errors.
 
-- **Cloud & Plataformas:** AWS, GCP, Azure, Bare-Metal / On-Premises, Kubernetes, Docker, Linux Systems.
-- **Automação & IaC:** Terraform, Ansible, Python, Bash, CI/CD (GitHub Actions, GitLab CI, ArgoCD).
-- **Segurança & Resiliência:** DevSecOps, Hardening de Borda, IAM & Governança, Vault, WAF, Auditoria Contínua.
-- **Observabilidade & IA:** Prometheus, Grafana, OpenTelemetry, ELK/LGTM, Integração Prática de LLMs e IA.
+### 2. [Resilient Multi-Environment Platform](https://gitlab.com/lazarovbonifacio/devops-contexts)
+- **Business Challenge / Bottleneck:** Microservice deployment bottlenecks, lack of standardized CI/CD pipelines, and severe availability risks during peak traffic surges.
+- **Architectural Decision & Trade-offs:** Designed a decoupled architecture with Kubernetes orchestration, automated static validation, and canary releases. Enforced centralized platform governance paired with controlled autonomy for feature squads.
+- **Measurable Impact:** **Continuous zero-downtime releases**, a 65% reduction in lead time for feature delivery, and complete audit visibility.
+
+### 3. [Custom Observability & Telemetry Pipeline](https://gitlab.com/lazarovbonifacio/monitoring-scripts)
+- **Business Challenge / Bottleneck:** Alert fatigue across engineering teams caused by noisy, generic metrics, significantly delaying detection of real revenue-impacting incidents.
+- **Architectural Decision & Trade-offs:** Built custom telemetry collectors in Python integrated with Prometheus/Zabbix, applying dynamic thresholds and intelligent event correlation aligned with critical business SLOs.
+- **Measurable Impact:** **70% reduction in alert noise** and proactive prevention of resource exhaustion before reaching end customers.
+
+### 4. [Infrastructure Automation & Systems Hardening](https://gitlab.com/lazarovbonifacio/meus-ansible-playbooks)
+- **Business Challenge / Bottleneck:** Fragmented server fleet management creating compliance vulnerabilities, human configuration errors, and costly emergency fixes.
+- **Architectural Decision & Trade-offs:** Standardized infrastructure state via modular, idempotent Ansible playbooks, enforcing rigorous edge hardening without compromising service flexibility.
+- **Measurable Impact:** **100% continuous configuration compliance** and a 90% reduction in manual fleet maintenance overhead.
+
+---
+
+## Execution Tooling & Technology Stack
+
+Mastered technologies are execution instruments subordinate to strategic architectural decisions:
+
+- **Core Backends & APIs:** Python, Go, PHP, REST, gRPC, API Gateways, Distributed Systems.
+- **Cloud & Platforms:** AWS, GCP, Azure, Bare-Metal / On-Premises, Kubernetes (EKS/GKE), Docker, Proxmox, Linux Systems.
+- **Automation & IaC:** Terraform, Ansible, GitOps (ArgoCD), CI/CD (GitHub Actions, GitLab CI, Bitbucket Pipelines), Bash.
+- **Security & Resilience:** DevSecOps, Edge Hardening, IAM & Least Privilege, Vault, WAF, Continuous Compliance & Auditing.
+- **Observability & AI:** LGTM Stack (Loki, Grafana, Tempo, Mimir), Prometheus, OpenTelemetry, ELK, Applied LLM/AI Workflows.
