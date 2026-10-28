@@ -1,9 +1,10 @@
-# Lázaro V. Bonifácio
-### Systems Architect & Software Engineering Consultant
+# Lázaro V. Bonifácio ⚙️
+### Senior Platform & Cloud Infrastructure Engineer
+*Platform Engineering, Cloud Automation & Resilient Distributed Systems*
 
-I design resilient, efficient software architectures tailored to solve real business problems. I partner with CTOs and engineering leadership to transform operational bottlenecks into scalable, secure-by-design systems with controlled costs — on or off cloud, with or without AI.
+I architect and operate resilient, cost-efficient, and developer-first cloud platforms that eliminate delivery friction. Backed by deep hands-on expertise in platform engineering, Kubernetes orchestration, and Infrastructure as Code, I partner with engineering leadership and cross-functional product squads to transform operational bottlenecks into scalable, self-service platforms with controlled unit economics (FinOps).
 
-🌐 **Official Website:** [lazarovbonifacio.com](https://lazarovbonifacio.com)  
+🌐 **Website:** [lazarovbonifacio.com](https://lazarovbonifacio.com)  
 📄 **Curriculum Vitae:** [View my CV](https://lazarovbonifacio.com/resume-cv/)  
 📫 **Contact:** [contact@lazarovbonifacio.com](mailto:contact@lazarovbonifacio.com) | [LinkedIn](https://www.linkedin.com/in/lazarovbonifacio/) | [WhatsApp](https://wa.me/5584988135261)
 
@@ -11,43 +12,51 @@ I design resilient, efficient software architectures tailored to solve real busi
 
 ## Strategic Value Delivery Pillars
 
-1. **Systems Architecture & Modernization:** Robust backend design, domain modularization, microservices, and resilient API contracts built to sustain rapid business growth with long-term maintainability.
-2. **Infrastructure Efficiency & FinOps:** Conscious resource sizing, cloud waste elimination, and tailored hybrid or bare-metal architectures to optimize financial margins without compromising performance.
-3. **Security & Continuity by Design:** Hardened delivery pipelines and edge security, access governance (IAM), and continuous compliance auditing without slowing down deployment velocity.
-4. **Process Automation & Applied AI:** Eliminating repetitive manual operational bottlenecks with robust automation tooling and practical LLM/computer vision integrations applied directly to production workflows.
+1. **Internal Developer Platforms (IDP) & GitOps:** Eliminating developer cognitive load through self-service service catalogs (Backstage), declarative GitOps workflows (ArgoCD), and reusable Helm templates that accelerate software delivery.
+2. **Infrastructure Efficiency & FinOps:** Dynamic compute bin-packing via Karpenter, event-driven pod autoscaling (KEDA), cloud waste elimination, and multi-account cost governance engineered to optimize margins without sacrificing reliability.
+3. **Enterprise Cloud & Distributed Systems:** Scalable multi-account cloud landing zones (AWS Organizations, GCP), CIS compliance, zero-trust network boundaries, and infrastructure guardrails orchestrated via OpenTofu and Terragrunt.
+4. **Deterministic Platform Tooling & Applied AI:** Engineering high-performance infrastructure tools in Go and implementing Model Context Protocol (MCP) servers to guarantee zero-hallucination preflights and eliminate breaking API upgrades.
 
 ---
 
-## Case Studies & Architecture Solutions
+## Flagship Architecture Case Studies
 
-### 1. [Simple Machine: Portable Environments via IaC](https://github.com/lazarovbonifacio/simple_machine)
-- **Business Challenge / Bottleneck:** Environment discrepancies between development and production triggering release failures, slow developer onboarding, and unnecessary cloud compute costs for local testing.
-- **Architectural Decision & Trade-offs:** Declarative provisioning pipelines via IaC (Vagrant/Terraform/Ansible) isolating dependencies. Prioritized immutable base environments over ad-hoc scripts, favoring deterministic repeatability over fragile configurations.
-- **Measurable Impact:** **80% reduction in local setup time** and complete elimination of configuration drift errors.
+### 1. [Valinor Platform: Multi-Cloud Landing Zone & Internal Developer Platform (IDP)](https://github.com/lazarovbonifacio/valinor-infra)
+- **Business Challenge / Bottleneck:** Multi-cloud sprawl, fragmented governance across accounts, high cognitive load for application developers, and slow time-to-market for new microservices.
+- **Architectural Decision & Trade-offs:** Architected Day 0 enterprise landing zones across 4 clouds (AWS, Azure, GCP, OCI) using OpenTofu and Terragrunt in a DRY structure. Decoupled the Management Hub Cluster (GKE hosting Backstage, Keycloak, Argo CD, LGTM stack) from ephemeral spoke workloads, enforcing CIS landing zone principles and AWS Control Tower/AFT patterns.
+- **Measurable Impact:** **100% automated Day 0 infrastructure provisioning**, unified cross-cloud compliance, zero vendor lock-in via OpenTofu, and a self-service platform experience for engineering squads.
 
-### 2. [Resilient Multi-Environment Platform](https://gitlab.com/lazarovbonifacio/devops-contexts)
-- **Business Challenge / Bottleneck:** Microservice deployment bottlenecks, lack of standardized CI/CD pipelines, and severe availability risks during peak traffic surges.
-- **Architectural Decision & Trade-offs:** Designed a decoupled architecture with Kubernetes orchestration, automated static validation, and canary releases. Enforced centralized platform governance paired with controlled autonomy for feature squads.
-- **Measurable Impact:** **Continuous zero-downtime releases**, a 65% reduction in lead time for feature delivery, and complete audit visibility.
+### 2. [Enterprise AWS Blueprint: Multi-Account Microservices & FinOps](https://github.com/lazarovbonifacio/enterprise-aws-blueprint)
+- **Business Challenge / Bottleneck:** Uncontrolled AWS compute expenses, blast-radius risks from monolithic accounts, and slow cluster autoscaling during sudden traffic surges.
+- **Architectural Decision & Trade-offs:** Designed an AWS Organizations multi-account topology (Management, Shared Services, Staging, Production) provisioned via Terragrunt. Replaced legacy cluster autoscalers with **Karpenter** for dynamic JIT node provisioning and bin-packing, paired with **KEDA** for event-driven pod autoscaling and Topology Spread Constraints across Availability Zones.
+- **Measurable Impact:** **Up to 40% reduction in EC2 compute spend** via intelligent spot/on-demand bin-packing, sub-minute autoscaling response, and complete blast-radius isolation between environments.
 
-### 3. [Custom Observability & Telemetry Pipeline](https://gitlab.com/lazarovbonifacio/monitoring-scripts)
-- **Business Challenge / Bottleneck:** Alert fatigue across engineering teams caused by noisy, generic metrics, significantly delaying detection of real revenue-impacting incidents.
-- **Architectural Decision & Trade-offs:** Built custom telemetry collectors in Python integrated with Prometheus/Zabbix, applying dynamic thresholds and intelligent event correlation aligned with critical business SLOs.
-- **Measurable Impact:** **70% reduction in alert noise** and proactive prevention of resource exhaustion before reaching end customers.
+### 3. [DevOps Preflight MCP: Deterministic Verification & AI Agentic Architecture](https://github.com/lazarovbonifacio/devops-prefight-mcp)
+- **Business Challenge / Bottleneck:** High-risk Kubernetes upgrades, silent API/CRD deprecation breakages, and unvetted configuration updates causing cluster downtime during Helm chart and EKS addon upgrades.
+- **Architectural Decision & Trade-offs:** Engineered a high-performance Go CLI and **Model Context Protocol (MCP)** server. Enforced a "zero-hallucination" architecture: all validations (OpenAPI v3 AST diffing, JSON Schema validation) are 100% deterministic and read-only, delegating contextual synthesis to AI coding and DevOps agents via standard MCP tool schemas.
+- **Measurable Impact:** **Elimination of breaking API incidents** before deployment, deterministic upgrade confidence scores, and native integration with autonomous AI workflows.
 
-### 4. [Infrastructure Automation & Systems Hardening](https://gitlab.com/lazarovbonifacio/meus-ansible-playbooks)
-- **Business Challenge / Bottleneck:** Fragmented server fleet management creating compliance vulnerabilities, human configuration errors, and costly emergency fixes.
-- **Architectural Decision & Trade-offs:** Standardized infrastructure state via modular, idempotent Ansible playbooks, enforcing rigorous edge hardening without compromising service flexibility.
-- **Measurable Impact:** **100% continuous configuration compliance** and a 90% reduction in manual fleet maintenance overhead.
+### 4. [Simple Machine: Deterministic Development Environments via IaC](https://github.com/lazarovbonifacio/simple_machine)
+- **Business Challenge / Bottleneck:** "Works on my machine" syndrome, long developer onboarding cycles spanning multiple days, and costly configuration drift between local dev and cloud staging.
+- **Architectural Decision & Trade-offs:** Built declarative, reproducible provisioning pipelines with IaC (Vagrant/Terraform/Ansible) isolating runtime dependencies into immutable base configurations. Prioritized deterministic repeatability over ad-hoc scripts.
+- **Measurable Impact:** **80% reduction in local environment setup time** and complete elimination of configuration drift errors.
 
 ---
 
-## Execution Tooling & Technology Stack
+## Platform Engineering Toolkit & Technology Stack
 
-Mastered technologies are execution instruments subordinate to strategic architectural decisions:
+- **Cloud & Platforms:** AWS (Organizations, Control Tower, EKS, VPC, Transit Gateway), GCP (GKE, Shared VPC), Azure, OCI, Bare-Metal, Linux Internals.
+- **IaC & Orchestration:** OpenTofu, Terraform, Terragrunt, Ansible, Kubernetes, Helm, Docker, Karpenter, KEDA.
+- **Continuous Delivery & GitOps:** Argo CD, GitHub Actions, GitLab CI, Supply Chain Security.
+- **Programming & Custom Tooling:** Go, Python, Bash, REST, gRPC, Model Context Protocol (MCP).
+- **Observability & SRE:** LGTM Stack (Loki, Grafana, Tempo, Mimir), Prometheus, OpenTelemetry, Alertmanager, Datadog.
 
-- **Core Backends & APIs:** Python, Go, PHP, REST, gRPC, API Gateways, Distributed Systems.
-- **Cloud & Platforms:** AWS, GCP, Azure, Bare-Metal / On-Premises, Kubernetes (EKS/GKE), Docker, Proxmox, Linux Systems.
-- **Automation & IaC:** Terraform, Ansible, GitOps (ArgoCD), CI/CD (GitHub Actions, GitLab CI, Bitbucket Pipelines), Bash.
-- **Security & Resilience:** DevSecOps, Edge Hardening, IAM & Least Privilege, Vault, WAF, Continuous Compliance & Auditing.
-- **Observability & AI:** LGTM Stack (Loki, Grafana, Tempo, Mimir), Prometheus, OpenTelemetry, ELK, Applied LLM/AI Workflows.
+---
+
+## 📬 Connect & Collaborate
+
+[![Website](https://img.shields.io/badge/-Website-%23005A9C?style=for-the-badge&logo=googlechrome&logoColor=white)](https://lazarovbonifacio.com)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-%230A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/lazarovbonifacio/)
+[![Email](https://img.shields.io/badge/-Email-%23008299?style=for-the-badge&logo=mailboxdotorg&logoColor=white)](mailto:contact@lazarovbonifacio.com)
+[![Telegram](https://img.shields.io/badge/-Telegram-%2329A9EB?style=for-the-badge&logo=telegram&logoColor=white)](https://t.me/lazarovbonifacio/)
+[![WhatsApp](https://img.shields.io/badge/-WhatsApp-%230BC143?style=for-the-badge&logo=whatsapp&logoColor=white)](https://wa.me/5584988135261)
